@@ -1,0 +1,61 @@
+.profile {
+  max-width: 100%;
+  background-color: var(--blue-800);
+  border-radius: 5%;
+}
+
+.card {
+  padding: 24px;
+  background-color: var(--blue-400);
+  border-radius: 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 2rem;
+}
+
+.avatar {
+  margin-bottom: 32px;
+  width: 70px;
+  height: 70px;
+}
+
+.photo {
+  width: 100%;
+  height: auto;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.subtitle {
+  margin: 8px 0;
+  font-size: var(--fs-little);
+  font-weight: var(--weight-light);
+}
+
+.title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: var(--weight-light);
+}
+
+.periods {
+  padding: 24px;
+}
+
+.period {
+  font-size: var(--fs-base);
+  font-weight: var(--weight-light);
+  cursor: pointer;
+  color: var(--blue-200);
+}
+
+.period:hover {
+  color: white;
+}
+
+.activePeriod {
+  color: white;
+}
