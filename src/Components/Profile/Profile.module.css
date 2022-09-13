@@ -3,6 +3,8 @@
   height: 100%;
   background-color: var(--blue-800);
   border-radius: 4%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card {
@@ -41,9 +43,11 @@
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  gap: 18px;
 }
 
 .period {
+  margin: 0;
   font-size: var(--fs-base);
   font-weight: var(--weight-light);
   cursor: pointer;

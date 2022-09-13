@@ -19,12 +19,12 @@ const Dashboard = () => {
             setPeriod={setPeriod}
           />
         </div>
-        <Item title='Work' time='33' />
-        <Item title='Play' time='33' />
-        <Item title='Study' time='33' />
-        <Item title='Exercise' time='33' />
-        <Item title='Social' time='33' />
-        <Item title='Self Care' time='33' />
+        <Item period={period} title='Work' time='33' />
+        <Item period={period} title='Play' time='33' />
+        <Item period={period} title='Study' time='33' />
+        <Item period={period} title='Exercise' time='33' />
+        <Item period={period} title='Social' time='33' />
+        <Item period={period} title='Self Care' time='33' />
       </div>
     </div>
   );

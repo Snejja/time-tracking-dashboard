@@ -4,7 +4,13 @@ import classNames from 'classnames';
 import styles from './Item.module.css';
 import { ReactComponent as Decoration } from '../../icons/icon-ellipsis.svg';
 
-const Item = ({ title, time }) => {
+const Item = ({ period, title, time }) => {
+  const lastPeriod = {
+    Daily: 'Day',
+    Weekly: 'Week',
+    Monthly: 'Month',
+  };
+
   return (
     <div
       className={classNames(styles.item, {
@@ -24,7 +30,9 @@ const Item = ({ title, time }) => {
           </div>
         </div>
         <p className={styles.time}>{time}hrs</p>
-        <p>Last</p>
+        <p className={styles.lastPeriod}>
+          Last {lastPeriod[period]} - {time}hrs
+        </p>
       </div>
     </div>
   );

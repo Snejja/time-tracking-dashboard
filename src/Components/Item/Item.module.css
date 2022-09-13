@@ -64,6 +64,12 @@
 }
 
 .time {
-  margin: 0;
+  margin: 24px 0 16px;
   font-size: var(--fs-big);
+}
+
+.lastPeriod {
+  margin: 0;
+  font-size: var(--fs-little);
+  font-weight: var(--weight-light);
 }
