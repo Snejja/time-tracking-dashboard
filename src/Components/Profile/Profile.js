@@ -6,10 +6,8 @@ import styles from './Profile.module.css';
 const Profile = ({ avatar, name, period, setPeriod }) => (
   <div className={styles.profile}>
     <div className={styles.card}>
-      <div className={styles.avatar}>
-        <img src={avatar} alt='avatar' className={styles.photo} />
-      </div>
-      <div className={styles.text}>
+      <img src={avatar} alt='avatar' className={styles.photo} />
+      <div>
         <p className={styles.subtitle}>Report for</p>
         <h1 className={styles.title}>{name}</h1>
       </div>
