@@ -4,7 +4,9 @@ import classNames from 'classnames';
 import styles from './Item.module.css';
 import { ReactComponent as Decoration } from '../../icons/icon-ellipsis.svg';
 
-const Item = ({ period, title, time }) => {
+const Item = ({ period, data }) => {
+  const { title, timeframes } = data;
+  const time = timeframes[String(period).toLowerCase()];
   const lastPeriod = {
     Daily: 'Day',
     Weekly: 'Week',
@@ -29,9 +31,9 @@ const Item = ({ period, title, time }) => {
             <Decoration />
           </div>
         </div>
-        <p className={styles.time}>{time}hrs</p>
+        <p className={styles.time}>{time.current}hrs</p>
         <p className={styles.lastPeriod}>
-          Last {lastPeriod[period]} - {time}hrs
+          Last {lastPeriod[period]} - {time.previous}hrs
         </p>
       </div>
     </div>

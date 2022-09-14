@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import avatar from '../../icons/image-jeremy.png';
-import Item from '../Item/Item';
+import Item from '../Item';
 import Profile from '../Profile';
 import styles from './Dashboard.module.css';
+import avatar from '../../icons/image-jeremy.png';
 
 const Dashboard = () => {
   const [period, setPeriod] = useState('Daily');
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    async function dashboardData() {
+      const response = await fetch('/data.json');
+      const json = await response.json();
+
+      setData(json);
+    }
+
+    dashboardData();
+  }, []);
+
+  if (!data) return <div />;
 
   return (
     <div className={styles.dashboard}>
@@ -19,12 +33,9 @@ const Dashboard = () => {
             setPeriod={setPeriod}
           />
         </div>
-        <Item period={period} title='Work' time='33' />
-        <Item period={period} title='Play' time='33' />
-        <Item period={period} title='Study' time='33' />
-        <Item period={period} title='Exercise' time='33' />
-        <Item period={period} title='Social' time='33' />
-        <Item period={period} title='Self Care' time='33' />
+        {data.map((item) => (
+          <Item period={period} data={item} key={item.title} />
+        ))}
       </div>
     </div>
   );
