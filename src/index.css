@@ -14,10 +14,9 @@ body,
 }
 
 .app {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
 }
 
 :root {
