@@ -13,6 +13,13 @@ body,
   height: 100%;
 }
 
+.app {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+
 :root {
   /* colors */
   --blue-100: hsl(195, 74%, 62%);
