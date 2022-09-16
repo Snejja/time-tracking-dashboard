@@ -39,9 +39,10 @@ body,
   --weight-light: 300;
   --weight-normal: 400;
   --weight-bold: 500;
+  --radius: 10px;
 
   --max-width: 1440px;
-  --max-mobile-width: 375px;
+  --max-mobile-width: 800px;
 }
 
 body {

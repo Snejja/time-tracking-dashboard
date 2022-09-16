@@ -31,10 +31,12 @@ const Item = ({ period, data }) => {
             <Decoration />
           </div>
         </div>
-        <p className={styles.time}>{time.current}hrs</p>
-        <p className={styles.lastPeriod}>
-          Last {lastPeriod[period]} - {time.previous}hrs
-        </p>
+        <div className={styles.time}>
+          <p className={styles.period}>{time.current}hrs</p>
+          <p className={styles.lastPeriod}>
+            Last {lastPeriod[period]} - {time.previous}hrs
+          </p>
+        </div>
       </div>
     </div>
   );
