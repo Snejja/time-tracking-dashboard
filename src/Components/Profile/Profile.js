@@ -14,25 +14,25 @@ const Profile = ({ avatar, name, period, setPeriod }) => (
     </div>
     <div className={styles.periods}>
       <p
-        onClick={() => setPeriod('Daily')}
+        onClick={() => setPeriod('daily')}
         className={classNames(styles.period, {
-          [styles.activePeriod]: period === 'Daily',
+          [styles.activePeriod]: period === 'daily',
         })}
       >
         Daily
       </p>
       <p
-        onClick={() => setPeriod('Weekly')}
+        onClick={() => setPeriod('weekly')}
         className={classNames(styles.period, {
-          [styles.activePeriod]: period === 'Weekly',
+          [styles.activePeriod]: period === 'weekly',
         })}
       >
         Weekly
       </p>
       <p
-        onClick={() => setPeriod('Monthly')}
+        onClick={() => setPeriod('monthly')}
         className={classNames(styles.period, {
-          [styles.activePeriod]: period === 'Monthly',
+          [styles.activePeriod]: period === 'monthly',
         })}
       >
         Monthly

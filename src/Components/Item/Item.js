@@ -6,11 +6,11 @@ import { ReactComponent as Decoration } from '../../icons/icon-ellipsis.svg';
 
 const Item = ({ period, data }) => {
   const { title, timeframes } = data;
-  const time = timeframes[String(period).toLowerCase()];
+  const time = timeframes[period];
   const lastPeriod = {
-    Daily: 'Day',
-    Weekly: 'Week',
-    Monthly: 'Month',
+    daily: 'Day',
+    weekly: 'Week',
+    monthly: 'Month',
   };
 
   return (

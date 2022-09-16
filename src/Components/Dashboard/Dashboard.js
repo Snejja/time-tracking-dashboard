@@ -6,7 +6,7 @@ import styles from './Dashboard.module.css';
 import avatar from '../../icons/image-jeremy.png';
 
 const Dashboard = () => {
-  const [period, setPeriod] = useState('Daily');
+  const [period, setPeriod] = useState('daily');
   const [data, setData] = useState(null);
 
   useEffect(() => {
